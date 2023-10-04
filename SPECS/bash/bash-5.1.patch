@@ -1,7 +1,7 @@
 diff -ruN a/config-top.h b/config-top.h
 --- a/config-top.h	2021-11-22 17:56:18.201075654 -0800
 +++ b/config-top.h	2021-11-22 17:56:56.328946350 -0800
-@@ -91,7 +91,7 @@
+@@ -91,21 +91,21 @@
  #define DEFAULT_BASHRC "~/.bashrc"
  
  /* System-wide .bashrc file for interactive shells. */
@@ -10,7 +10,14 @@ diff -ruN a/config-top.h b/config-top.h
  
  /* System-wide .bash_logout for login shells. */
  /* #define SYS_BASH_LOGOUT "/etc/bash.bash_logout" */
-@@ -104,7 +104,7 @@
+
+ /* Define this to make non-interactive shells begun with argv[0][0] == '-'
+    run the startup files when not in posix mode. */
+-/* #define NON_INTERACTIVE_LOGIN_SHELLS */
++#define NON_INTERACTIVE_LOGIN_SHELLS
+
+ /* Define this if you want bash to try to check whether it's being run by
+    sshd and source the .bashrc if so (like the rshd behavior).  This checks
     sshd and source the .bashrc if so (like the rshd behavior).  This checks
     for the presence of SSH_CLIENT or SSH2_CLIENT in the initial environment,
     which can be fooled under certain not-uncommon circumstances. */
